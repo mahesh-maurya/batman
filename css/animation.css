@@ -1,0 +1,380 @@
+/*light rotating*/
+
+@-webkit-keyframes rotating {
+  0% {
+    transform: rotate(0deg)translatey(-200px);
+  }
+  10% {
+    transform: rotate(-20deg)translatey(-200px);
+  }
+  20% {
+    transform: rotate(-10deg)translatey(-200px);
+  }
+  30% {
+    transform: rotate(0deg)translatey(-200px);
+  }
+  40% {
+    transform: rotate(10deg)translatey(-200px);
+  }
+  50% {
+    transform: rotate(20deg)translatey(-200px);
+  }
+  60% {
+    transform: rotate(30deg)translatey(-200px);
+  }
+  70% {
+    transform: rotate(40deg)translatey(-200px);
+  }
+  80% {
+    transform: rotate(30deg)translatey(-200px);
+  }
+  90% {
+    transform: rotate(20deg)translatey(-200px);
+  }
+  100% {
+    transform: rotate(0deg)translatey(-200px);
+    ;
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg)translatey(-200px);
+  }
+  10% {
+    transform: rotate(-20deg)translatey(-200px);
+  }
+  20% {
+    transform: rotate(-10deg)translatey(-200px);
+  }
+  30% {
+    transform: rotate(0deg)translatey(-200px);
+  }
+  40% {
+    transform: rotate(10deg)translatey(-200px);
+  }
+  50% {
+    transform: rotate(20deg)translatey(-200px);
+  }
+  60% {
+    transform: rotate(30deg)translatey(-200px);
+  }
+  70% {
+    transform: rotate(40deg)translatey(-200px);
+  }
+  80% {
+    transform: rotate(30deg)translatey(-200px);
+  }
+  90% {
+    transform: rotate(20deg)translatey(-200px);
+  }
+  100% {
+    transform: rotate(0deg)translatey(-200px);
+    ;
+  }
+}
+
+.rotating {
+  -webkit-animation: rotating 30s linear infinite;
+  -moz-animation: rotating 30s linear infinite;
+  -ms-animation: rotating 30s linear infinite;
+  -o-animation: rotating 30s linear infinite;
+  animation: rotating 30s linear infinite;
+  transform-origin: 4px 157px;
+}
+
+
+/*window code*/
+
+.elementToFadeInAndOut {
+  opacity: 0;
+  animation: fade 1s linear;
+}
+
+@keyframes fade {
+  0%,
+  50% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+
+/*Now just a opacity animation*/
+
+.flashit {
+  -webkit-animation: flash ease-out 10s infinite;
+  -moz-animation: flash ease-out 10s infinite;
+  animation: flash ease-out 10s infinite;
+  animation-delay: 1s;
+}
+
+@-webkit-keyframes flash {
+  from {
+    opacity: 0;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  90% {
+    opacity: 0;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  91% {
+    opacity: 0.5;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  92% {
+    opacity: 0;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  93% {
+    opacity: 1;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  94% {
+    opacity: 0.5;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  95% {
+    opacity: 1;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  96% {
+    opacity: 0.5;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  to {
+    opacity: 0;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+}
+
+@keyframes flash {
+  from {
+    opacity: 0;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  92% {
+    opacity: 0;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  93% {
+    opacity: 0.6;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  94% {
+    opacity: 0.2;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  96% {
+    opacity: 1;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+  to {
+    opacity: 0;
+    -webkit-filter: brightness(3);
+    filter: brightness(3);
+    -o-filter: brightness(3);
+    -moz-filter: brightness(3);
+  }
+}
+.cloud1 img{
+  	-webkit-animation: movingclouds 4s linear infinite;
+	-moz-animation: movingclouds 4s linear infinite;
+	-o-animation: movingclouds 4s linear infinite;
+}
+@keyframes movingclouds {
+	0% {margin-top: 0;}
+	/*25% {margin-top:0.5%;}*/
+	50% {margin-top:1%;}
+	/*75% {margin-top:0.5%;}*/
+	100% {margin-top:0%;}
+}
+@-webkit-keyframes movingclouds {
+	0% {margin-top: 0;}
+	/*25% {margin-top:0.5%;}*/
+	50% {margin-top:1%;}
+	/*75% {margin-top:0.5%;}*/
+	100% {margin-top:0%;}
+}
+.cloud2 img{
+  	-webkit-animation: movingcloud 4s linear infinite;
+	-moz-animation: movingcloud 4s linear infinite;
+	-o-animation: movingcloud 4s linear infinite;
+   animation-delay:1s;
+}
+@keyframes movingcloud {
+	0% {margin-top: 0;}
+
+	50% {margin-top:10px;}
+
+	100% {margin-top:0;}
+}
+
+/*End! is that simple! */
+
+
+/*End! is that simple! */
+
+
+/*text animation*/
+
+/*.one{
+    -webkit-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(1px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+}
+
+
+.focus {
+position: absolute;
+
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    filter: blur(1px);
+    font-size: 17px;
+    opacity: 1;
+    color: #bef80d;
+    letter-spacing: 5px;
+}
+.mask {
+    position: absolute;
+    width: 23px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 17px;
+    letter-spacing: 5px;
+  clip: rect(0px, 70px, 75px, 0px);
+  background: linear-gradient(#fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat;
+  background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
+      color: #bef80d;
+  transform: translateX(0);
+  box-sizing: border-box;
+  animation: mask 2.5s ease infinite alternate;
+}
+.texts {
+  transform: translateX(0);
+  animation: text 2.5s ease infinite alternate;
+}
+@keyframes mask {
+  to {
+    transform: translateX(60px);
+  }
+}
+@keyframes text {
+  to {
+    transform: translateX(-60px);
+  }
+}
+
+svg {
+    display: block;
+    font: 12.5em 'pt mono';
+    width: 254px;
+    height: 46px;
+    margin: 0 0px 0 -53px;
+}
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+        letter-spacing: 25px;
+}
+
+.text-copy:nth-child(1){
+	stroke: #b8ee11;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #96c30e;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #b8ee11;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #96c30e;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #96c30e;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}*/
