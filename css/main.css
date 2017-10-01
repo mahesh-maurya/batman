@@ -180,6 +180,7 @@ p.technic.design {
        bottom: 273px;
     opacity: 0.7;
 }
+
 .light-lamp {
     position: absolute;
     right: 26px;
@@ -206,13 +207,147 @@ p.technic.design {
 
 /*window code*/
 .window-left {
+      position: absolute;
+    bottom: 146px;
+    right: 24px;
+}
+.window-right {
     position: absolute;
-    bottom: 88px;
-    right: 21px;
+    bottom: 162px;
+    left: 101px;
 }
 
+.window-right img {
+    width: 26px;
+}
+.window-right2 {
+    position: absolute;
+    bottom: 26px;
+    left: 56px;
+}
+
+.window-right2 img {
+    width: 23px;
+}
+.window-right3 {
+    position: absolute;
+    bottom: 161px;
+    left: 10px;
+}
+
+.window-right3 img {
+    width: 25px;
+}
+.window-mid {
+    position: absolute;
+    left: 329px;
+    bottom: 55px;
+}
+
+.window-mid img {
+    width: 17px;
+}
+.window-mid2 {
+    position: absolute;
+    bottom: 12px;
+    left: 383px;
+}
+
+.window-mid2 img {
+    width: 18px;
+}
+.window-mid3 {
+    position: absolute;
+    bottom: 129px;
+    right: 498px;
+}
+.window-mid4 {
+    position: absolute;
+    bottom: 132px;
+    right: 564px;
+}
+
+.window-mid4 img {
+    width: 26px;
+}
+.window-mid5 {
+    position: absolute;
+    bottom: 79px;
+    right: 498px;
+}
+
+.window-mid5 img {
+    width: 26px;
+}
+
+.window-mid3 img {
+    width: 28px;
+}
 .window-left img {
     width: 29px;
+}
+.window-left2 {
+    position: absolute;
+    right: 87px;
+    bottom: 60px;
+}
+
+.window-left2 img {
+    width: 27px;
+}
+.window-mid6 {
+    position: absolute;
+    bottom: 42px;
+    right: 229px;
+}
+
+.window-mid6 img {
+    width: 16px;
+}
+
+.window-mid7 {
+    position: absolute;
+    bottom: 102px;
+    right: 210px;
+}
+
+.window-mid7 img {
+    width: 17px;
+}
+
+.window-mid8 img {
+    width: 17px;
+}
+
+.window-mid8 {
+    position: absolute;
+    bottom: 141px;
+    right: 210px;
+}
+
+.window-mid9 img {
+    width: 17px;
+}
+
+.window-mid9 {
+    position: absolute;
+    bottom: 81px;
+    right: 189px;
+}
+
+.window-mid10 img {
+    /* bottom: 30px; */
+    right:;
+}
+
+.window-mid10 {
+    position: absolute;
+    bottom: 142px;
+    right: 148px;
+}
+
+.window-mid10 img {
+    width: 17px;
 }
 /*end*/
 
@@ -326,6 +461,15 @@ cloud {
 }
 
 /*about us*/
+.svg-top-line{
+    position: absolute;
+    top: -86px;
+    height: 100%;
+        left: -36px;
+}
+.svg-top-line svg{
+    height: 100%;
+}
 .title-bx {
     position: relative;
     margin-bottom: -74px;
@@ -438,12 +582,12 @@ about.section {
     position: relative;
 }
 
-.about-box.content-box:before {
+/*.about-box.content-box:before {
     border: 1px solid #bef80d;
     height: 255px;
     position: absolute;
     top: -190px;
-}
+}*/
 
 
 /*services*/
@@ -634,13 +778,13 @@ works.section {
 .content-box {
     position: relative;
 }
-
+/*
 .content-box:before {
     border: 1px solid #bef80d;
     height: 230px;
     position: absolute;
     top: -224px;
-}
+}*/
 
 /*footer*/
 

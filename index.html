@@ -9,14 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mahesh Maurya">
   <meta name="keywords" content="Mahesh Maurya">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
-
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/velocity.min.js" type="text/javascript"></script>
- 
   <script src="js/main.js" type="text/javascript"></script>
    <script src="js/typeit.min.js" type="text/javascript"></script>
    <script src="js/three.min.js" type="text/javascript"></script>
@@ -25,6 +23,8 @@
    <script src="js/obj/Bird.js" type="text/javascript"></script>
      <script src="js/jquery.nicescroll.min.js" type="text/javascript"></script>
    <script src="js/parallaxImg.js" type="text/javascript"></script>
+      <script src="js/jquery.scrollme.js" type="text/javascript"></script>
+
  <script>
        $(document).on("ready", function() {
       var parallaxSettings = {
@@ -35,10 +35,11 @@
 
       parallaxImgScroll(parallaxSettings);
     });
+    
   </script>
  </script>
   <!--<script src="js/masonary.min.js"  type="text/javascript"></script>-->
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="css/animate.css" />
    <link rel="stylesheet" type="text/css" href="css/animation.css" />
@@ -201,7 +202,49 @@
 
     <!--window code-->
 
+    <div class="window-right elementToFadeInAndOut3">
+      <img src="img/object/windowbig-light.jpg" alt="">
+    </div>
+    <div class="window-right2 elementToFadeInAndOut4">
+      <img src="img/object/windowbig.jpg" alt="">
+    </div>
+    <div class="window-right3 elementToFadeInAndOut5">
+      <img src="img/object/windowbig.jpg" alt="">
+    </div>
+    <div class="window-mid elementToFadeInAndOut6">
+      <img src="img/object/windowtwo.jpg" alt="">
+    </div>
+    <div class="window-mid2 elementToFadeInAndOut">
+      <img src="img/object/windowtwo2.jpg" alt="">
+    </div>
+    <div class="window-mid3 elementToFadeInAndOut7">
+      <img src="img/object/windowbox2.png" alt="">
+    </div>
+    <div class="window-mid4 elementToFadeInAndOut8">
+      <img src="img/object/windowbox.png" alt="">
+    </div>
+    <div class="window-mid5 elementToFadeInAndOut9">
+      <img src="img/object/windowbox.png" alt="">
+    </div>
+    <div class="window-mid6 elementToFadeInAndOut27">
+      <img src="img/object/windowone1.png" alt="">
+    </div>
+    <div class="window-mid7 elementToFadeInAndOut11">
+      <img src="img/object/windowone1.png" alt="">
+    </div>
+    <div class="window-mid8 elementToFadeInAndOut13">
+      <img src="img/object/windowone.png" alt="">
+    </div>
+    <div class="window-mid9 elementToFadeInAndOut12">
+      <img src="img/object/windowone.png" alt="">
+    </div>
+    <div class="window-mid10 elementToFadeInAndOut14">
+      <img src="img/object/windowone1.png" alt="">
+    </div>
     <div class="window-left elementToFadeInAndOut">
+      <img src="img/object/windowthree.jpg" alt="">
+    </div>
+    <div class="window-left2 elementToFadeInAndOut2">
       <img src="img/object/windowthree.jpg" alt="">
     </div>
     <!--end-->
@@ -215,12 +258,18 @@
           <div class="title title-bx">
             <h1>curious</h1>
           </div>
+<div class="svg-top-line">
+            <svg id="mySVG">
+  <path fill="none" stroke="#bef80d" stroke-width="3" id="triangle" d="M150 0 L150 275" />
+  Sorry, your browser does not support inline SVG.
+</svg>
+</div>
           <div class="row">
-            <div class="col-md-6 col-md-offset-1">
-              <div class="about-box content-box">
-                <h5>about <span class="font-big">Me</span></h5>
+            <div class="col-md-6 col-md-offset-1 ">
+              <div class="about-box content-box" >
+                <h5 >about <span class="font-big">Me</span></h5>
                 <h2>a maker</h2>
-                <div class="of">
+                <div class="of ">
                   <span>of</span>
                 </div>
                 <div class="thing">
@@ -602,11 +651,11 @@
 .tiSettings({speed: 500})
 .tiType('<p class="of">OF</p>');
      </script>
-     <script>
+     <!--<script>
 
 function init(){container=document.getElementById("canvas"),document.body.appendChild(container),camera=new THREE.PerspectiveCamera(75,SCREEN_WIDTH/SCREEN_HEIGHT,1,1e4),camera.position.z=450,scene=new THREE.Scene,birds=[],boids=[];for(var i=0;30>i;i++)boid=boids[i]=new Boid,boid.position.x=400*Math.random()-200,boid.position.y=400*Math.random()-200,boid.position.z=400*Math.random()-200,boid.velocity.x=2*Math.random()-1,boid.velocity.y=2*Math.random()-1,boid.velocity.z=2*Math.random()-1,boid.setAvoidWalls(!0),boid.setWorldSize(500,500,400),bird=birds[i]=new THREE.Mesh(new Bird,new THREE.MeshBasicMaterial({color:16777215*Math.random(),side:THREE.DoubleSide})),bird.phase=Math.floor(62.83*Math.random()),scene.add(bird);renderer=new THREE.CanvasRenderer({alpha:!0}),renderer.setClearColor(16777215,0),renderer.setSize(container.offsetWidth,container.offsetHeight),container.appendChild(renderer.domElement),window.addEventListener("resize",onWindowResize,!1)}function onWindowResize(){camera.aspect=window.innerWidth/window.innerHeight,camera.updateProjectionMatrix(),renderer.setSize(window.innerWidth,window.innerHeight)}function onDocumentMouseMove(i){for(var t=new THREE.Vector3(i.clientX-SCREEN_WIDTH_HALF,-i.clientY+SCREEN_HEIGHT_HALF,0),o=0,e=boids.length;e>o;o++)boid=boids[o],t.z=boid.position.z,boid.repulse(t)}function animate(){requestAnimationFrame(animate),render()}function render(){for(var i=0,t=birds.length;t>i;i++)boid=boids[i],boid.run(boids),bird=birds[i],bird.position.copy(boids[i].position),color=bird.material.color,color.r=color.g=color.b=13369344,bird.rotation.y=Math.atan2(-boid.velocity.z,boid.velocity.x),bird.rotation.z=Math.asin(boid.velocity.y/boid.velocity.length()),bird.phase=(bird.phase+(Math.max(0,bird.rotation.z)+.1))%62.83,bird.geometry.vertices[5].y=bird.geometry.vertices[4].y=5*Math.sin(bird.phase);renderer.render(scene,camera)}var Boid=function(){var i,t,o=new THREE.Vector3,e=500,n=500,s=200,r=100,a=4,d=.1,c=!1;this.position=new THREE.Vector3,this.velocity=new THREE.Vector3,i=new THREE.Vector3,this.setGoal=function(i){t=i},this.setAvoidWalls=function(i){c=i},this.setWorldSize=function(i,t,o){e=i,n=t,s=o},this.run=function(t){c&&(o.set(-e,this.position.y,this.position.z),o=this.avoid(o),o.multiplyScalar(5),i.add(o),o.set(e,this.position.y,this.position.z),o=this.avoid(o),o.multiplyScalar(5),i.add(o),o.set(this.position.x,-n,this.position.z),o=this.avoid(o),o.multiplyScalar(5),i.add(o),o.set(this.position.x,n,this.position.z),o=this.avoid(o),o.multiplyScalar(5),i.add(o),o.set(this.position.x,this.position.y,-s),o=this.avoid(o),o.multiplyScalar(5),i.add(o),o.set(this.position.x,this.position.y,s),o=this.avoid(o),o.multiplyScalar(5),i.add(o)),Math.random()>.5&&this.flock(t),this.move()},this.flock=function(o){t&&i.add(this.reach(t,.005)),i.add(this.alignment(o)),i.add(this.cohesion(o)),i.add(this.separation(o))},this.move=function(){this.velocity.add(i);var t=this.velocity.length();t>a&&this.velocity.divideScalar(t/a),this.position.add(this.velocity),i.set(0,0,0)},this.checkBounds=function(){this.position.x>e&&(this.position.x=-e),this.position.x<-e&&(this.position.x=e),this.position.y>n&&(this.position.y=-n),this.position.y<-n&&(this.position.y=n),this.position.z>s&&(this.position.z=-s),this.position.z<-s&&(this.position.z=s)},this.avoid=function(i){var t=new THREE.Vector3;return t.copy(this.position),t.sub(i),t.multiplyScalar(1/this.position.distanceToSquared(i)),t},this.repulse=function(t){var o=this.position.distanceTo(t);if(150>o){var e=new THREE.Vector3;e.subVectors(this.position,t),e.multiplyScalar(.5/o),i.add(e)}},this.reach=function(i,t){var o=new THREE.Vector3;return o.subVectors(i,this.position),o.multiplyScalar(t),o},this.alignment=function(i){for(var t,o=new THREE.Vector3,e=0,n=0,s=i.length;s>n;n++)Math.random()>.6||(t=i[n],distance=t.position.distanceTo(this.position),distance>0&&distance<=r&&(o.add(t.velocity),e++));if(e>0){o.divideScalar(e);var a=o.length();a>d&&o.divideScalar(a/d)}return o},this.cohesion=function(i){for(var t,o,e=new THREE.Vector3,n=new THREE.Vector3,s=0,a=0,c=i.length;c>a;a++)Math.random()>.6||(t=i[a],o=t.position.distanceTo(this.position),o>0&&r>=o&&(e.add(t.position),s++));s>0&&e.divideScalar(s),n.subVectors(e,this.position);var h=n.length();return h>d&&n.divideScalar(h/d),n},this.separation=function(i){for(var t,o,e=new THREE.Vector3,n=new THREE.Vector3,s=0,a=i.length;a>s;s++)Math.random()>.6||(t=i[s],o=t.position.distanceTo(this.position),o>0&&r>=o&&(n.subVectors(this.position,t.position),n.normalize(),n.divideScalar(o),e.add(n)));return e}},SCREEN_WIDTH=window.innerWidth,SCREEN_HEIGHT=window.innerHeight,SCREEN_WIDTH_HALF=SCREEN_WIDTH/2,SCREEN_HEIGHT_HALF=SCREEN_HEIGHT/2,camera,scene,renderer,birds,bird,boid,boids,stats;init(),animate();
 
-		</script>
+		</script>-->
 
 </body>
 <script>
@@ -689,7 +738,31 @@ function init(){container=document.getElementById("canvas"),document.body.append
 // }
 
 // next()
-
+  $(document).on("ready", function() {
+  
+})
     </script>
-	
+	<script>
+// Get the id of the <path> element and the length of <path>
+var triangle = document.getElementById("triangle");
+var length = triangle.getTotalLength();
+
+// The start position of the drawing
+triangle.style.strokeDasharray = length;
+
+// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+triangle.style.strokeDashoffset = length;
+
+// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+window.addEventListener("scroll", myFunction);
+
+function myFunction() {
+var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight );
+
+  var draw = length * scrollpercent * 4;
+  
+  // Reverse the drawing (when scrolling upwards)
+  triangle.style.strokeDashoffset = length - draw;
+}
+</script>
 </html>

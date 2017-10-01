@@ -87,18 +87,183 @@
 /*window code*/
 
 .elementToFadeInAndOut {
-  opacity: 0;
-  animation: fade 1s linear;
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 16s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut11 {
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 36s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut12 {
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 6s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut13 {
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 14s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut14 {
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 19s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut15 {
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 27s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut4 {
+ -webkit-animation: 2s ease 0s normal forwards 1 fadein ;
+    animation: 2s ease 0s normal forwards 1 fadein;
+     animation-delay: 19s;
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut7 {
+ -webkit-animation: 2s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 0s normal forwards 1 fadein;
+     animation-delay: 23s;
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut8 {
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 12s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut9 {
+ -webkit-animation: 2s ease  0s normal forwards 1 fadein;
+    animation: 2s ease  0s normal forwards 1 fadein;
+     animation-delay: 25s;
+     
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut5 {
+ -webkit-animation: 2s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 0s normal forwards 1 fadein;
+     animation-delay: 20s;
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut6 {
+ -webkit-animation: 2s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 0s normal forwards 1 fadein ;
+     animation-delay: 36s;
+}
+
+@keyframes fadein {
+  0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+ 
+}
+.elementToFadeInAndOut3 {
+ -webkit-animation: 2s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 0s normal forwards 1 fadein;
+     animation-delay: 7s;
+      /*animation-iteration-count: infinite;*/
+}
+
+@keyframes fadein {
+  0% { opacity:1; }
+    66% { opacity:1; }
+    100% { opacity:0; }
+ 
+}
+.elementToFadeInAndOut2 {
+ -webkit-animation: 2s ease 0s normal forwards 1 fade;
+    animation: 2s ease 0s normal forwards 1 fade;
+     animation-delay: 32s;
+    
 }
 
 @keyframes fade {
-  0%,
-  50% {
-    opacity: 1
-  }
-  100% {
-    opacity: 0
-  }
+ 
+  0%,20%,30%,40%,50% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+ 
 }
 
 
