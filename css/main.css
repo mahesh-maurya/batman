@@ -194,12 +194,37 @@ p.technic.design {
 /*light code*/
 .object-light1 {
     position: absolute;
-    bottom: -23px;
+    bottom: -14px;
     left: 399px;
 }
 
 .object-light1 img {
     width: 299px;
+}
+.object-light2 {
+    position: absolute;
+    bottom: -100px;
+    right: 256px;
+    z-index: -9;
+}
+
+.object-light2 img {
+    width: 299px;
+}
+.object-light3 {
+    position: absolute;
+    bottom: 358px;
+    right: 199px;
+}
+
+.object-light3 img {
+    width: 299px;
+}
+.bg:-webkit-scrollbar { 
+    display: none; 
+}
+.showBat {
+    display: block !important;
 }
 
 /*end*/
