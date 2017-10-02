@@ -180,7 +180,9 @@ p.technic.design {
        bottom: 273px;
     opacity: 0.7;
 }
-
+#lightShow{
+    visibility: visible !important;
+}
 .light-lamp {
     position: absolute;
     right: 26px;

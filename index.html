@@ -67,7 +67,43 @@
 </head>
 
 <body>
-
+<div class="loader">  
+          <div class="batmanLoader">
+            <div class="bat-cave">
+            <div class="left-wing-connector">
+                <div></div> <!-- 1 --> 
+                <div></div> <!-- 2 --> 
+                <div></div> <!-- 3 --> 
+            </div>
+            <div class="left-wing">
+                <div></div> <!-- 1 --> 
+                <div></div> <!-- 2 --> 
+                <div></div> <!-- 3 -->
+                <div class="left-smoother">
+                </div>
+            </div>
+            <div class="bat-body">
+                <div></div> <!-- 1 --> 
+                <div></div> <!-- 2 --> 
+                <div></div> <!-- 3 --> 
+                <div></div> <!-- 4 --> 
+                <div></div> <!-- 5 --> 
+            </div>
+            <div class="right-wing-connector">
+                <div></div> <!-- 1 --> 
+                <div></div> <!-- 2 --> 
+                <div></div> <!-- 3 --> 
+            </div>
+            <div class="right-wing">
+                <div></div> <!-- 1 --> 
+                <div></div> <!-- 2 --> 
+                <div></div> <!-- 3 -->
+                <div class="right-smoother">                
+                </div>
+            </div>
+            </div>
+            </div>
+</div>
   <div class="bg section parallax-img-container">
     <!--<div class="fog-animation"> 
     <div id="foglayer_01" class="fog">
@@ -83,9 +119,9 @@
 	   <div class="image02"></div>
     </div>
 </div>-->
-    <div class="bat">
+    <!--<div class="bat">
       <div id="canvas" style="visibility: hidden"></div>
-    </div>
+    </div>-->
     <nav class="navbar navbar-inverse ">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -176,22 +212,22 @@
     <div class="tower5">
       <img src="img/object/tower4.png" alt="">
     </div>
-    <div class="main-light blink">
+    <!--<div class="main-light blink">
       <img src="img/main-light.png" alt="">
-    </div>
+    </div>-->
     <!--<div class="batman">
       <img src="img/batman.png" alt="">
     </div>-->
-    <div class="light-lamp">
+    <!--<div class="light-lamp">
       <img src="img/component2.png" alt="">
-    </div>
-    <div class="object-light1 rotating">
+    </div>-->
+    <div class="object-light1 rotating" id="light" style="visibility: hidden">
       <img src="img/object/light.png" alt="" class="">
     </div>
-    <div class="object-light2 rotating2">
+    <div class="object-light2 rotating2" id="lightTwo" style="visibility: hidden">
       <img src="img/object/light.png" alt="" class="">
     </div>
-    <div class="object-light3 rotating3">
+    <div class="object-light3 rotating3" id="lightThree" style="visibility: hidden">
       <img src="img/object/light2.png" alt="" class="">
     </div>
     <div class="lightning flashit">
@@ -652,10 +688,37 @@
     </div>
   </footer>
   <script>
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#lightTwo").attr("id", "lightShow");
+}, 4000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#lightThree").attr("id", "lightShow");
+}, 5000);
+});
+      
+// showing light by second 
+window.onload=function()  //executes when the page finishes loading
+{
+	setTimeout(func1, 3000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+	
+};
+function func1()
+{
+	document.getElementById("light").style.visibility = "visible";
+}
+
+// end
+
+// showing canvas
     function showIt2() {
   document.getElementById("canvas").style.visibility = "visible";
 }
 setTimeout("showIt2()", 8000);
+
+// end
     $('#example4').typeIt({
         speed: 200,
         autoStart: false,
