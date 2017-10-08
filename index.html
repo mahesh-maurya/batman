@@ -164,10 +164,15 @@
           </mahesh>
         </div>
       </div>
-      <!--<div class="col-md-3 padding0">
+      <div class="col-md-3 padding0">
 <div class="info-mhs">  
- <div class="text technic" ></div>
- <div class="designer">
+ <div class="text technic" id="freelance" style="display: none"></div>
+ <p class="commonp" id="design" style="display: none">Designer</p>
+ <p class="commonp" id="dev" style="display: none">Developer</p>
+<p class="marvel animated fadeIn" id="marvel" style="display: none"> MarvelFan</p>
+<p class="commonp animated rubberBand" id="from" style="display: none"> From</p>
+<p class="commonp animated slideInUp" id="india" style="display: none"> India</p>
+ <!--<div class="designer animated bounce" id="design" style="display: none">
 <svg viewBox="0 0 960 300">
 	<symbol id="s-text">
 		<text text-anchor="middle" x="50%" y="80%">Designer</text>
@@ -181,18 +186,12 @@
 		<use xlink:href="#s-text" class="text-copy"></use>
 	</g>
 </svg>
- </div>
-  <p class="one">D</p> <span class="technic design develp">evelo<span class="pulse">p</span>er</span>
-  <p class="marvel">MarvelFan</p>
-   <p class="commonp">From</p>
-  <div class="focus">
-    India
-  </div>
-  <div class="mask">
-    <div class="texts">India</div>
-  </div>
+ </div>-->
+ <!--<div id="dev" style="display: none" class="animated tada"> <p class="one" >D</p> <span class="technic design develp">evelo<span class="pulse">p</span>er</span></div>-->
+
+
 </div>
-      </div>-->
+      </div>
     </div>
   </div>
 </topinfo>
@@ -232,7 +231,7 @@
     </div>
     <div class="lightning flashit">
     </div>
-    <!--<div class="overlayer"></div>-->
+    <div class="overlayer animated fadeIn" id="overlayer" style="display: none"></div>
 
   </div>
 
@@ -700,28 +699,63 @@ document.onreadystatechange = function () {
       },2000);
   }
 }
-
+// end
 
     $(document).ready(function () {
 setTimeout(function(){
+ $("#india").attr("id", "lightShow").fadeIn('slow');
+}, 51000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#from").attr("id", "lightShow").fadeIn('slow');
+}, 50000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#marvel").attr("id", "lightShow").fadeIn('slow');
+}, 49000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#dev").attr("id", "lightShow").fadeIn('slow');
+}, 48000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#design").attr("id", "lightShow").fadeIn('slow');
+}, 47000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#freelance").attr("id", "lightShow").fadeIn('slow');
+}, 46000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
  $("#maheshtext").attr("id", "lightShow").fadeIn('slow');
-}, 42200);
+}, 44000);
 });
 
     $(document).ready(function () {
 setTimeout(function(){
- $("#batman").attr("id", "lightShow").fadeIn('slow');
-}, 24800);
+ $("#batman").attr("id", "lightShow").fadeOut('1000');
+}, 25800);
 });
     $(document).ready(function () {
 setTimeout(function(){
  $("#welcometext").attr("id", "lightShow").fadeIn('slow');
-}, 26000);
+}, 26800);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#overlayer").attr("id", "lightShow").fadeIn('8000');
+}, 24200);
 });
     $(document).ready(function () {
 setTimeout(function(){
  $("#blink").attr("id", "lightShow");
-}, 22000);
+}, 21500);
 });
     $(document).ready(function () {
 setTimeout(function(){

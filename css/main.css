@@ -45,13 +45,13 @@ a:focus{
 
   z-index: 111;
 }
-/*topinfo{
+topinfo{
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
         z-index: 999999999999;
-}*/
+}
 .first-line p {
     color: #bef80d;
     font-size: 16px;
@@ -63,18 +63,19 @@ a:focus{
   animation: type 5s steps(40, end);
 }
 .commonp{
-        font-size: 17px;
+    font-size: 14px;
     color: #bef80d;
     letter-spacing: 4px;
+    margin: 0;
+    line-height: 230%;
 }
 p.marvel {
-    color: #bef80d;
-    font-size: 16px;
+      color: #bef80d;
     background: rgba(255, 255, 255, 0.44);
     display: inline-block;
     letter-spacing: 5px;
     padding: 6px 9px 6px 13px;
-    margin-top: 7px;
+       margin: 6px 0;
 }
 p.to {
     padding: 4px 0 0 66px;
@@ -96,7 +97,7 @@ p.to {
 
 .develp {
     color: #b8ee11;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 4px;
         padding-top: 5px;
 }
@@ -143,6 +144,7 @@ mahesh>h1{
     color: #b8ee11;
     font-size: 16px;
     letter-spacing: 5px;
+    padding-bottom: 4px;
  
 }
 p.technic.design {

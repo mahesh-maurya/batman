@@ -640,7 +640,7 @@ transform-origin: 300px 480px;
 
 /*text animation*/
 
-/*.one{
+.one{
     -webkit-animation-duration: 1.8s;
   animation-duration: 1.8s;
   -webkit-animation-fill-mode: both;
@@ -713,7 +713,7 @@ position: absolute;
 
 svg {
     display: block;
-    font: 12.5em 'pt mono';
+    font: 11.5em 'pt mono';
     width: 254px;
     height: 46px;
     margin: 0 0px 0 -53px;
@@ -749,13 +749,13 @@ svg {
 }
 
 .text-copy:nth-child(5){
-	stroke: #96c30e;
+	stroke: #b8ee11;
 	animation-delay: -5s;
 }
 
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
-}*/
+}
 
 
 /* FOG ANIMATION */
