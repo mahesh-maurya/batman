@@ -182,6 +182,7 @@ p.technic.design {
 }
 #lightShow{
     visibility: visible !important;
+    display: block !important;
 }
 .light-lamp {
     position: absolute;
@@ -409,7 +410,7 @@ p.technic.design {
 #canvas {
     width: 100%;
     height: 100%;
-
+transition: all 2s ease-in;
 
 }
 div#canvas {

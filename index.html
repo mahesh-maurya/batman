@@ -67,7 +67,7 @@
 </head>
 
 <body>
-<div class="loader">  
+<div class="loader" id="loader">  
           <div class="batmanLoader">
             <div class="bat-cave">
             <div class="left-wing-connector">
@@ -119,9 +119,9 @@
 	   <div class="image02"></div>
     </div>
 </div>-->
-    <!--<div class="bat">
+    <div class="bat">
       <div id="canvas" style="visibility: hidden"></div>
-    </div>-->
+    </div>
     <nav class="navbar navbar-inverse ">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -141,17 +141,17 @@
       </div>
     </cloud>
 
-    <!--<topinfo>   
+    <topinfo>   
   <div class="container">
     <div class="row">
       <div class="col-md-offset-3 col-md-3">
-        <div class="welcome "> 
+        <div class="welcome" > 
           <div class="type-js first-line">
-          <p id="example4"></p> 
+          <p id="welcometext" style="visibility: hidden"></p> 
         </div>
         </div>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-1" id="maheshtext" style="display: none">
         <div class="top-main-title cut">
           
           <mahesh >
@@ -164,7 +164,7 @@
           </mahesh>
         </div>
       </div>
-      <div class="col-md-3 padding0">
+      <!--<div class="col-md-3 padding0">
 <div class="info-mhs">  
  <div class="text technic" ></div>
  <div class="designer">
@@ -192,10 +192,10 @@
     <div class="texts">India</div>
   </div>
 </div>
-      </div>
+      </div>-->
     </div>
   </div>
-</topinfo>-->
+</topinfo>
 
     <div class="tower1">
       <img src="img/object/tower1.png" alt="">
@@ -212,15 +212,15 @@
     <div class="tower5">
       <img src="img/object/tower4.png" alt="">
     </div>
-    <!--<div class="main-light blink">
+    <div class="main-light blink" id="blink" style="visibility: hidden">
       <img src="img/main-light.png" alt="">
-    </div>-->
-    <!--<div class="batman">
+    </div>
+    <div class="batman" id="batman" style="visibility: hidden">
       <img src="img/batman.png" alt="">
-    </div>-->
-    <!--<div class="light-lamp">
+    </div>
+    <div class="light-lamp">
       <img src="img/component2.png" alt="">
-    </div>-->
+    </div>
     <div class="object-light1 rotating" id="light" style="visibility: hidden">
       <img src="img/object/light.png" alt="" class="">
     </div>
@@ -688,21 +688,57 @@
     </div>
   </footer>
   <script>
+
+      // loader
+
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'complete') {
+      setTimeout(function(){
+          document.getElementById('interactive');
+         document.getElementById('loader').style.visibility="hidden";
+      },2000);
+  }
+}
+
+
     $(document).ready(function () {
 setTimeout(function(){
- $("#lightTwo").attr("id", "lightShow");
-}, 4000);
+ $("#maheshtext").attr("id", "lightShow").fadeIn('slow');
+}, 42200);
+});
+
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#batman").attr("id", "lightShow").fadeIn('slow');
+}, 24800);
 });
     $(document).ready(function () {
 setTimeout(function(){
+ $("#welcometext").attr("id", "lightShow").fadeIn('slow');
+}, 26000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#blink").attr("id", "lightShow");
+}, 22000);
+});
+    $(document).ready(function () {
+setTimeout(function(){
+ $("#lightTwo").attr("id", "lightShow");
+}, 7000);
+});
+
+    $(document).ready(function () {
+setTimeout(function(){
  $("#lightThree").attr("id", "lightShow");
-}, 5000);
+}, 8000);
 });
       
 // showing light by second 
 window.onload=function()  //executes when the page finishes loading
 {
-	setTimeout(func1, 3000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+	setTimeout(func1, 6000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
 	
 };
 function func1()
@@ -716,13 +752,15 @@ function func1()
     function showIt2() {
   document.getElementById("canvas").style.visibility = "visible";
 }
-setTimeout("showIt2()", 8000);
+setTimeout("showIt2()", 18000);
 
 // end
-    $('#example4').typeIt({
+    $('#welcometext').typeIt({
         speed: 200,
         autoStart: false,
-        cursor: false
+        cursor: false,
+        startDelay:29000
+        
       })
       .tiType('<p class="welcome">WELCOME TO</p>')
       .tiPause(500)
@@ -869,77 +907,77 @@ setTimeout("showIt2()", 8000);
   });
 
   // animation text
-  // class TextScramble {
-  //   constructor(el) {
-  //     this.el = el
-  //     this.chars = '!<>-_\\/[]{}—=+*^?#________'
-  //     this.update = this.update.bind(this)
-  //   }
-  //   setText(newText) {
-  //     const oldText = this.el.innerText
-  //     const length = Math.max(oldText.length, newText.length)
-  //     const promise = new Promise((resolve) => this.resolve = resolve)
-  //     this.queue = []
-  //     for (let i = 0; i < length; i++) {
-  //       const from = oldText[i] || ''
-  //       const to = newText[i] || ''
-  //       const start = Math.floor(Math.random() * 40)
-  //       const end = start + Math.floor(Math.random() * 40)
-  //       this.queue.push({ from, to, start, end })
-  //     }
-  //     cancelAnimationFrame(this.frameRequest)
-  //     this.frame = 0
-  //     this.update()
-  //     return promise
-  //   }
-  //   update() {
-  //     let output = ''
-  //     let complete = 0
-  //     for (let i = 0, n = this.queue.length; i < n; i++) {
-  //       let { from, to, start, end, char } = this.queue[i]
-  //       if (this.frame >= end) {
-  //         complete++
-  //         output += to
-  //       } else if (this.frame >= start) {
-  //         if (!char || Math.random() < 0.28) {
-  //           char = this.randomChar()
-  //           this.queue[i].char = char
-  //         }
-  //         output += `<span class="dud">${char}</span>`
-  //       } else {
-  //         output += from
-  //       }
-  //     }
-  //     this.el.innerHTML = output
-  //     if (complete === this.queue.length) {
-  //       this.resolve()
-  //     } else {
-  //       this.frameRequest = requestAnimationFrame(this.update)
-  //       this.frame++
-  //     }
-  //   }
-  //   randomChar() {
-  //     return this.chars[Math.floor(Math.random() * this.chars.length)]
-  //   }
-  // }
+  class TextScramble {
+    constructor(el) {
+      this.el = el
+      this.chars = '!<>-_\\/[]{}—=+*^?#________'
+      this.update = this.update.bind(this)
+    }
+    setText(newText) {
+      const oldText = this.el.innerText
+      const length = Math.max(oldText.length, newText.length)
+      const promise = new Promise((resolve) => this.resolve = resolve)
+      this.queue = []
+      for (let i = 0; i < length; i++) {
+        const from = oldText[i] || ''
+        const to = newText[i] || ''
+        const start = Math.floor(Math.random() * 40)
+        const end = start + Math.floor(Math.random() * 40)
+        this.queue.push({ from, to, start, end })
+      }
+      cancelAnimationFrame(this.frameRequest)
+      this.frame = 0
+      this.update()
+      return promise
+    }
+    update() {
+      let output = ''
+      let complete = 0
+      for (let i = 0, n = this.queue.length; i < n; i++) {
+        let { from, to, start, end, char } = this.queue[i]
+        if (this.frame >= end) {
+          complete++
+          output += to
+        } else if (this.frame >= start) {
+          if (!char || Math.random() < 0.28) {
+            char = this.randomChar()
+            this.queue[i].char = char
+          }
+          output += `<span class="dud">${char}</span>`
+        } else {
+          output += from
+        }
+      }
+      this.el.innerHTML = output
+      if (complete === this.queue.length) {
+        this.resolve()
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update)
+        this.frame++
+      }
+    }
+    randomChar() {
+      return this.chars[Math.floor(Math.random() * this.chars.length)]
+    }
+  }
 
-  // const phrases = [
-  //   'Freelancer',
+  const phrases = [
+    'Freelancer',
 
-  // ]
+  ]
 
-  // const el = document.querySelector('.text')
-  // const fx = new TextScramble(el)
+  const el = document.querySelector('.text')
+  const fx = new TextScramble(el)
 
-  // let counter = 0
-  // const next = () => {
-  //   fx.setText(phrases[counter]).then(() => {
-  //     setTimeout(next, 800)
-  //   })
-  //   counter = (counter + 1) % phrases.length
-  // }
+  let counter = 0
+  const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+      setTimeout(next, 800)
+    })
+    counter = (counter + 1) % phrases.length
+  }
 
-  // next()
+  next()
 </script>
 <script>
   // Get the id of the <path> element and the length of <path>
@@ -963,6 +1001,8 @@ setTimeout("showIt2()", 8000);
     // Reverse the drawing (when scrolling upwards)
     triangle.style.strokeDashoffset = length - draw;
   }
+
+
 </script>
 
 </html>
