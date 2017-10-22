@@ -313,26 +313,60 @@
       <div class="row">
         <div class="col-md-12">
 
-          <div class="title title-bx">
-            <h1>curious</h1>
+          <div class="title title-bx scrollme">
+            <h1  class="animateme"
+        data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-translatey="200"
+        >curious</h1>
+            <!--<div class="animateme overlayer-text" >    
+              <h1>curious</h1>
+            </div>-->
           </div>
           <div class="svg-top-line">
             <svg id="mySVG">
-              <path fill="none" stroke="#bef80d" stroke-width="3" id="triangle" d="M150 0 L150 275" /> Sorry, your browser does not support inline SVG.
+              <path fill="none" stroke="#bef80d" stroke-width="3" id="triangle" d="M150 0 L150 275" />
             </svg>
           </div>
           <div class="row">
             <div class="col-md-6 col-md-offset-1 ">
-              <div class="about-box content-box">
-                <h5>about <span class="font-big">Me</span></h5>
-                <h2>a maker</h2>
-                <div class="of ">
+              <div class="about-box content-box scrollme">
+                <h5 class="animateme"
+        data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-translatey="200">about <span class="font-big">Me</span></h5>
+                <h2 class="animateme"
+        data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-translatey="200">a maker</h2>
+                <div class="of animateme"
+        data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-translatey="200">
                   <span>of</span>
+                  <div class="belowline"></div>
                 </div>
-                <div class="thing">
+             
+                <div class="thing animateme" data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-translatey="200">
                   <h2>things</h2>
                 </div>
-                <div class="about-desc">
+                <div class="about-desc animateme" data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-translatey="200">
                   <p>
                     If you never venture outside the box, you will probably not be creative. But if you never get inside the box, you will certainly
                     be stupid. Don’t think outside the box, think like there is No Box !
@@ -342,9 +376,14 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="about-img">
-                <img src="img/about.jpg" alt="about" class="img-responsive">
+              <div class="about-img scrollme">
+                <img src="img/about.jpg" alt="about" class="img-responsive animateme" data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-scale="1.5">
               </div>
+              <div class="linevert"></div>
             </div>
           </div>
 
@@ -352,11 +391,17 @@
         </div>
       </div>
     </div>
-    <div class="title hungry">
-      <h1>
+    <div class="title hungry scrollme">
+      <h1 class="animateme" data-when="enter"
+        data-from="1"
+        data-to="0"
+        data-opacity="0"
+        data-translatey="200">
         hungry
       </h1>
     </div>
+    <div class="linehide"></div>
+    
   </about>
 
   <services class="services">
@@ -1015,7 +1060,8 @@ setTimeout("showIt2()", 18000);
 </script>
 <script>
   // Get the id of the <path> element and the length of <path>
-  var triangle = document.getElementById("triangle");
+  // var triangle = document.getElementById("triangle");
+  var triangle = document.querySelector('#triangle');
   var length = triangle.getTotalLength();
 
   // The start position of the drawing
@@ -1036,6 +1082,45 @@ setTimeout("showIt2()", 18000);
     triangle.style.strokeDashoffset = length - draw;
   }
 
+// add class on scroll
+
+$(document).ready(function() {
+	var s = $(".linehide");
+	var pos = s.position();					   
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= pos.top) {
+			s.addClass("linegrowth");
+		} else {
+			s.removeClass("linegrowth");	
+		}
+	});
+});
+
+$(document).ready(function() {
+	var ss = $(".belowline");
+	var poss = ss.position();					   
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= poss.top) {
+			ss.addClass("belowline-grow");
+		} else {
+			ss.removeClass("belowline-grow");	
+		}
+	});
+});
+$(document).ready(function() {
+	var sss = $(".linevert");
+	var posss = sss.position();					   
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= posss.top) {
+			sss.addClass("linevert-full");
+		} else {
+			sss.removeClass("linevert-full");	
+		}
+	});
+});
 
 </script>
 

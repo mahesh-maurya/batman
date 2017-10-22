@@ -491,6 +491,15 @@ cloud {
 }
 
 /*about us*/
+
+.overlayer-text {
+    position: absolute;
+    top: 0;
+}
+.overlayer-text h1{
+    color: #bef80d !important;
+    opacity: 0.8 !important;
+}
 .svg-top-line{
     position: absolute;
     top: -86px;
@@ -512,7 +521,7 @@ cloud {
     font-size: 11.563em;
     font-weight: 800;
     letter-spacing: 20px;
-     opacity: 0.3;
+     opacity: 0.3 !important;
        z-index: -9;
        margin: 0;
 }
@@ -550,7 +559,7 @@ cloud {
     padding-top: 7px;
 }
 .of span {
-    border-bottom: 3px solid #bef80d;
+    /*border-bottom: 3px solid #bef80d;*/
     padding-left: 82px;
     font-size: 1.286em;
     padding-bottom: 4px;
@@ -577,7 +586,7 @@ cloud {
     margin-right: 0px;
     margin-top: -89px;
     position: relative;
-    z-index: -9;
+    z-index: -99;
         margin-bottom: 30px;
 }
 about.section {
@@ -585,12 +594,19 @@ about.section {
     display: block;
       padding: 30px 0 0 0;
 }
-.about-img:after {
-    content: '';
-    border: 1px solid #bef80d;
+
+.linevert {
+      border: 2px solid #c0f816;
+    width: 0;
+    height: 0;
     position: absolute;
-    right: 0;
-    height: 95px;
+    right: 15px;
+    transition: height 5s;
+    z-index: -9;
+}
+.linevert-full {
+    height: 100px;
+    transition: height 5s;
 }
 
 .about-img {
@@ -600,13 +616,28 @@ about.section {
     position: relative;
 }
 
-.abt-section:before {
-    content: '';
-    border: 1px solid #c0f816;
-    width: 140px;
+.linehide {
+    border: 2px solid #c0f816;
+    width: 0;
     position: absolute;
-    bottom: 0;
-    left: -88px;
+     bottom: 170px;
+    left: 0;
+    transition: width 5s;
+    
+}
+.belowline{
+    border: 2px solid #c0f816;
+    transition: width 5s;
+     width: 0;
+}
+.belowline-grow{
+ width: 106px;
+  transition: width 5s;
+}
+.linegrowth {
+    width: 140px;
+    transition: width 5s;
+    margin: 20px 0;
 }
 .about-box.content-box {
     position: relative;
